@@ -53,7 +53,7 @@ const FavoriteCountryList = () => {
         console.log('Using token:', token);
 
         // Fetch favorites from API with authorization header
-        const response = await fetch(`http://localhost:5000/api/favorites/user/${userId}`, {
+        const response = await fetch(`https://afbackend-production.up.railway.app/api/favorites/user/${userId}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -136,7 +136,7 @@ const FavoriteCountryList = () => {
         }
       };
 
-      const response = await fetch(`http://localhost:5000/api/favorites/${favoriteId}`, fetchOptions);
+      const response = await fetch(`https://afbackend-production.up.railway.app/api/favorites/${favoriteId}`, fetchOptions);
       
       // Check if response is ok
       if (!response.ok) {

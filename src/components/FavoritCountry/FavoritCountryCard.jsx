@@ -62,7 +62,7 @@ const FavoritCountryCard = ({ country, onRemove }) => {
       }
       
       // Call API to remove from favorites
-      const response = await fetch(`http://localhost:5000/api/favorites/${countryCode}`, {
+      const response = await fetch(`https://afbackend-production.up.railway.app/api/favorites/${countryCode}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
